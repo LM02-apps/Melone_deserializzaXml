@@ -28,13 +28,16 @@ public class App
      
     public static void main( String[] args ) throws IOException, TransformerException, ParserConfigurationException, SAXException
     {
-        serializeXml deserializza= new serializeXml();
+        XmlHandler deserializza= new XmlHandler();
         
-        root deserializzato=deserializza.whenJavaDeserializedFromXmlFile_thenCorrect();
+        
+        root deserializzato=deserializza.DeserializeXml();
 
-        String serializzato=deserializza.whenJavaSerializedToXmlStr_thenCorrect(deserializzato);
+        String serializzato=deserializza.SerializeXml(deserializzato);
         
         deserializza.prettyPrint(serializzato);
+
+        
     }
 
 

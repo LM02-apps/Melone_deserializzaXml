@@ -30,10 +30,10 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-public class serializeXml
+public class XmlHandler
 {
 
-    public root whenJavaDeserializedFromXmlFile_thenCorrect() throws IOException {
+    public root DeserializeXml() throws IOException {
         File file=new File("classe.xml");
         XmlMapper xmlMapper = new XmlMapper();
         //String xml=inputStreamToString(new FileInputStream(file));
@@ -45,7 +45,7 @@ public class serializeXml
        
     }
     
-    public String whenJavaSerializedToXmlStr_thenCorrect(root prova) throws IOException {
+    public String SerializeXml(root prova) throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
         String xml = xmlMapper.writeValueAsString(prova);
         return xml;
