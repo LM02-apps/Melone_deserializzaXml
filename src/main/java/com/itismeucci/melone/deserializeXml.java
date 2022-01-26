@@ -18,7 +18,9 @@ public class deserializeXml
         //String xml=inputStreamToString(new FileInputStream(file));
         root value = xmlMapper.readValue(file,root.class);
 
-        System.out.println(value.getAnnoDiInizio());
+        System.out.println ("la classe "+value.getClasse()+value.getSpecializzazione() +" si trova nell'aula "+value.getAula().getNome()+" ed è composta dai seguenti studenti:\n");
+        System.out.println (value.getStudenti().get(0).getCognome()+"\n"+value.getStudenti().get(1).getCognome());
+       
     }
     
     public  String inputStreamToString(InputStream is) throws IOException {

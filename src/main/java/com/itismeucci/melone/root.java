@@ -6,59 +6,50 @@ import java.util.List;
 public final class root 
 {
     private int annoDiInizio;
-    private List<aula> aula=new ArrayList<>();
+    private aula aula;
     private String classe;
     private int numeroFinestre;
     private String specializzazione;
-    private List<studenti> studenti=new ArrayList<>();
+    private List<element> studenti=new ArrayList<>();
     
-
     public int getAnnoDiInizio() {
-        return this.annoDiInizio;
+        return annoDiInizio;
     }
-
     public void setAnnoDiInizio(int annoDiInizio) {
         this.annoDiInizio = annoDiInizio;
     }
-
-    public List<aula> getAula() {
-        return this.aula;
+    public aula getAula() {
+        return aula;
     }
-
-    public void setAula(List<aula> aula) {
+    public void setAula(aula aula) {
         this.aula = aula;
     }
-
     public String getClasse() {
-        return this.classe;
+        return classe;
     }
-
     public void setClasse(String classe) {
         this.classe = classe;
     }
-
     public int getNumeroFinestre() {
-        return this.numeroFinestre;
+        return numeroFinestre;
     }
-
     public void setNumeroFinestre(int numeroFinestre) {
         this.numeroFinestre = numeroFinestre;
     }
-
     public String getSpecializzazione() {
-        return this.specializzazione;
+        return specializzazione;
     }
-
     public void setSpecializzazione(String specializzazione) {
         this.specializzazione = specializzazione;
     }
-
-    public List<studenti> getStudenti() {
-        return this.studenti;
+    public List<element> getStudenti() {
+        return studenti;
     }
-
-    public void setStudenti(List<studenti> studenti) {
+    public void setStudenti(List<element> studenti) {
         this.studenti = studenti;
     }
+    
+
+   
 
 }
